@@ -1,4 +1,4 @@
-[![NuGet](https://img.shields.io/nuget/v/NopLocalization.svg)](https://www.nuget.org/packages/RamDisk/)
+[![NuGet](https://img.shields.io/nuget/v/RamDisk.svg)](https://www.nuget.org/packages/RamDisk/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 # RamDisk
@@ -38,4 +38,4 @@ A **HUGE THANKS** for your help.
 
 ## License
 
-RamDisk is Copyright © 2020 [Mohammd Javad Ebrahimi](https://github.com/mjebrahimi) under the [MIT License](https://github.com/mjebrahimi/RamDiskLICENSE).
+RamDisk is Copyright © 2020 [Mohammd Javad Ebrahimi](https://github.com/mjebrahimi) under the [MIT License](https://github.com/mjebrahimi/RamDisk/LICENSE).
