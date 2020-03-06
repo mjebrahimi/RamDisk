@@ -15,7 +15,6 @@
     <Description>RamDisk is a library for create virtual disk drive on system memory</Description>
     <PackageTags>RamDisk ImDisk VirtualDrive VirtualDisk</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageLicenseUrl>https://github.com/mjebrahimi/RamDisk/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/mjebrahimi/RamDisk</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mjebrahimi/RamDisk</RepositoryUrl>
     <PackageReleaseNotes>https://github.com/mjebrahimi/RamDisk/releases</PackageReleaseNotes>
