@@ -1,7 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
+  
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>RamDisk</AssemblyName>
+    <PackageId>RamDisk</PackageId>
+    <Title>RamDisk</Title>
+    <Product>RamDisk</Product>
+    <Version>1.0.0</Version>
+    <PackageVersion>1.0.0</PackageVersion>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <Authors>Mohammad Javad Ebrahimi</Authors>
+    <Company>Mohammad Javad Ebrahimi</Company>
+    <Copyright>Copyright © Mohammad Javad Ebrahimi 2020</Copyright>
+    <Description>RamDisk is a library for create virtual disk drive on system memory</Description>
+    <PackageTags>RamDisk ImDisk VirtualDrive VirtualDisk</PackageTags>
+    <PackageLicenseUrl>https://github.com/mjebrahimi/RamDisk/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/mjebrahimi/RamDisk</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mjebrahimi/RamDisk</RepositoryUrl>
+    <PackageReleaseNotes>https://github.com/mjebrahimi/RamDisk/releases</PackageReleaseNotes>
+    <RepositoryType>git</RepositoryType>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
   </PropertyGroup>
 
   <ItemGroup>
