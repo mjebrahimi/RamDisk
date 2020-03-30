@@ -12,10 +12,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    # runs-on: $
-    # strategy:
-    #   matrix:
-    #     os: [macOS-latest, ubuntu-latest, windows-latest]
 
     steps:
     - name: Checkout
@@ -25,7 +21,6 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
-      # if: matrix.os == 'macOS-latest' || matrix.os == 'ubuntu-latest'
 
     - name: Build (Release)
       run: dotnet build --configuration Release
@@ -33,7 +28,7 @@ jobs:
     - name: Pack (Release)
       run: dotnet pack src --configuration Release
 
-    - name: Publish
+    - name: Publish (Nuget)
       if: github.event_name == 'push'
       run: |      
           if ( "${{github.ref}}" -match "^refs/tags/[0-9]+\.[0-9]+\.[0-9]+$" ) {
