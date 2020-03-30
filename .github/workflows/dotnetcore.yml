@@ -2,20 +2,42 @@ name: .NET Core
 
 on:
   push:
-    branches: [ master ]
+    paths-ignore:
+      - 'readme.md'
   pull_request:
-    branches: [ master ]
-    
+    paths-ignore:
+      - 'readme.md'
+
 jobs:
   build:
 
     runs-on: ubuntu-latest
+    # runs-on: $
+    # strategy:
+    #   matrix:
+    #     os: [macOS-latest, ubuntu-latest, windows-latest]
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
+
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
-    - name: Build with dotnet
+      # if: matrix.os == 'macOS-latest' || matrix.os == 'ubuntu-latest'
+
+    - name: Build (Release)
       run: dotnet build --configuration Release
+
+    - name: Pack (Release)
+      run: dotnet pack src --configuration Release
+
+    - name: Publish
+      if: github.event_name == 'push'
+      run: |      
+          if ( "${{github.ref}}" -match "^refs/tags/[0-9]+\.[0-9]+\.[0-9]+$" ) {
+              dotnet nuget push src\bin\Release\*.nupkg -s nuget.org -k ${{secrets.NUGET_TOKEN}} -s https://api.nuget.org/v3/index.json
+          } else {
+              echo "publish is only enabled by tagging with a release tag"
+          }
