@@ -5,6 +5,13 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RamDisk", "src\RamDisk.csproj", "{E3B03760-CCBC-433F-9DBB-C480CAF645BD}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RamDisk.Tests", "test\RamDisk.Tests.csproj", "{8466322F-F007-41B2-99D5-CA315DB7A7BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{327C4B6E-79BD-4461-A3E6-0FA76FDC43D1}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,10 @@ Global
 		{E3B03760-CCBC-433F-9DBB-C480CAF645BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3B03760-CCBC-433F-9DBB-C480CAF645BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3B03760-CCBC-433F-9DBB-C480CAF645BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8466322F-F007-41B2-99D5-CA315DB7A7BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8466322F-F007-41B2-99D5-CA315DB7A7BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8466322F-F007-41B2-99D5-CA315DB7A7BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8466322F-F007-41B2-99D5-CA315DB7A7BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

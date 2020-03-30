@@ -1,30 +1,37 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net40;net45;net461;</TargetFrameworks>
     <AssemblyName>RamDisk</AssemblyName>
     <PackageId>RamDisk</PackageId>
     <Title>RamDisk</Title>
     <Product>RamDisk</Product>
-    <Version>1.0.0</Version>
-    <PackageVersion>1.0.0</PackageVersion>
-    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <Version>1.0.1</Version>
+    <PackageVersion>1.0.1</PackageVersion>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
     <Authors>Mohammad Javad Ebrahimi</Authors>
     <Company>Mohammad Javad Ebrahimi</Company>
     <Copyright>Copyright © Mohammad Javad Ebrahimi 2020</Copyright>
     <Description>RamDisk is a library for create virtual disk drive on system memory</Description>
     <PackageTags>RamDisk ImDisk VirtualDrive VirtualDisk</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/mjebrahimi/RamDisk</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mjebrahimi/RamDisk</RepositoryUrl>
-    <PackageReleaseNotes>https://github.com/mjebrahimi/RamDisk/releases</PackageReleaseNotes>
     <RepositoryType>git</RepositoryType>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageIcon>RamDisk.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+  
+  <ItemGroup>
     <None Remove="imdisk.exe" />
+    <None Include="RamDisk.png" Pack="true" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup>
