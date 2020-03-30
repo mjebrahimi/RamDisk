@@ -21,9 +21,3 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
-
-    - name: Build (Release)
-      run: dotnet build --configuration Release
-
-    - name: Pack (Release)
-      run: dotnet pack src --configuration Release
