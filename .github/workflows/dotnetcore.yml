@@ -2,11 +2,9 @@ name: .NET Core
 
 on:
   push:
-    paths-ignore:
-      - 'readme.md'
+    branches: [ master ]
   pull_request:
-    paths-ignore:
-      - 'readme.md'
+    branches: [ master ]
 
 jobs:
   build:
