@@ -28,7 +28,7 @@ jobs:
       # if: matrix.os == 'macOS-latest' || matrix.os == 'ubuntu-latest'
 
     - name: Build (Release)
-      run: dotnet build --configuration Release
+      run: dotnet build src --configuration Release --framework netstandard2.0
 
     - name: Pack (Release)
       run: dotnet pack src --configuration Release
