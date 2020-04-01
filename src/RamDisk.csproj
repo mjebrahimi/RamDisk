@@ -6,9 +6,9 @@
     <PackageId>RamDisk</PackageId>
     <Title>RamDisk</Title>
     <Product>RamDisk</Product>
-    <Version>1.0.2</Version>
-    <PackageVersion>1.0.2</PackageVersion>
-    <AssemblyVersion>1.0.2</AssemblyVersion>
+    <Version>1.0.3</Version>
+    <PackageVersion>1.0.3</PackageVersion>
+    <AssemblyVersion>1.0.3</AssemblyVersion>
     <Authors>Mohammad Javad Ebrahimi</Authors>
     <Company>Mohammad Javad Ebrahimi</Company>
     <Copyright>Copyright © Mohammad Javad Ebrahimi 2020</Copyright>
@@ -24,6 +24,9 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageIcon>RamDisk.png</PackageIcon>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<DebugSymbols>true</DebugSymbols>
+	<IncludeSymbols>true</IncludeSymbols>
+	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <ItemGroup>
