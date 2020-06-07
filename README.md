@@ -3,7 +3,7 @@
 [![Build Status](https://github.com/mjebrahimi/RamDisk/workflows/.NET%20Core/badge.svg)](https://github.com/mjebrahimi/RamDisk)
 
 # RamDisk
-**RamDisk** is a library for create virtual disk drive on system memory (you have to have [ImDisk](http://www.ltr-data.se/opencode.html/#ImDisk) installed, which is used in the backend) which supports Windows NT/2000/XP/Vista/7/8/8.1/10 and Windows Server 2003/2003 R2/2008/2008 R2/2012/2012 R2, 32 and 64 bit (and ARM) editions.
+**RamDisk** is a library for create virtual disk drive on system memory (**you have to have [ImDisk](http://www.ltr-data.se/opencode.html/#ImDisk) installed, which is used in the backend - [download link of current stable version 2.0.10](http://www.ltr-data.se/files/imdiskinst.exe)**) which supports Windows NT/2000/XP/Vista/7/8/8.1/10 and Windows Server 2003/2003 R2/2008/2008 R2/2012/2012 R2, 32 and 64 bit (and ARM) editions.
 
 ## Get Started
 
