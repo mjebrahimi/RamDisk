@@ -1,38 +1,44 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  
+
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net40;net45;net461;</TargetFrameworks>
+    <LangVersion>9.0</LangVersion>
     <AssemblyName>RamDisk</AssemblyName>
     <PackageId>RamDisk</PackageId>
-    <Title>RamDisk</Title>
     <Product>RamDisk</Product>
-    <Version>1.0.3</Version>
-    <PackageVersion>1.0.3</PackageVersion>
-    <AssemblyVersion>1.0.3</AssemblyVersion>
+    <Title>RamDisk</Title>
+    <Version>1.0.4</Version>
+    <PackageVersion>1.0.4</PackageVersion>
+    <AssemblyVersion>1.0.4</AssemblyVersion>
     <Authors>Mohammad Javad Ebrahimi</Authors>
     <Company>Mohammad Javad Ebrahimi</Company>
     <Copyright>Copyright © Mohammad Javad Ebrahimi 2020</Copyright>
     <Description>RamDisk is a library for create virtual disk drive on system memory</Description>
     <PackageTags>RamDisk ImDisk VirtualDrive VirtualDisk</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/mjebrahimi/RamDisk</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mjebrahimi/RamDisk</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
-    <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <PackageIcon>RamDisk.png</PackageIcon>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-	<DebugSymbols>true</DebugSymbols>
-	<IncludeSymbols>true</IncludeSymbols>
-	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageIcon>RamDisk.png</PackageIcon>
+
+    <!-- Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <!-- Embed source files that are not tracked by the source control manager in the PDB -->
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <!-- Recommended: Embed symbols containing Source Link in the main file (exe/dll) -->
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <None Remove="imdisk.exe" />
     <None Include="RamDisk.png" Pack="true" PackagePath="" />
