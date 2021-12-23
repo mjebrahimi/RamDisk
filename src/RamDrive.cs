@@ -45,7 +45,7 @@ namespace RamDisk
             if (megaBytes <= 0)
                 throw new ArgumentException("Allocation size must be greater than zero.", nameof(megaBytes));
             if (string.IsNullOrWhiteSpace(volumeLabel))
-                throw new ArgumentNullException("Volume label muste be not null or empty.", nameof(volumeLabel));
+                throw new ArgumentNullException(nameof(volumeLabel), "Volume label muste be not null or empty.");
             if (DriveInfo.GetDrives().Any(d => d.Name.ToUpper()[0] == driveLetter))
                 throw new InvalidOperationException($"Drive '{driveLetter}' already exists.");
 
