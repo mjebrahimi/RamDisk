@@ -44,19 +44,19 @@ namespace RamDisk.Tests
         [Test]
         public void Drive_Name_ShouldBe_Z()
         {
-            Assert.AreEqual(Drive.Name, "X:\\");
+            Assert.AreEqual("X:\\", Drive.Name);
         }
 
         [Test]
         public void Drive_Label_ShouldBe_RamDisk()
         {
-            Assert.AreEqual(Drive.VolumeLabel, "MyDriveName");
+            Assert.AreEqual("MyDriveName", Drive.VolumeLabel);
         }
 
         [Test]
         public void Drive_Format_ShouldBe_NTFS()
         {
-            Assert.AreEqual(Drive.DriveFormat, FileSystem.NTFS.ToString());
+            Assert.AreEqual(FileSystem.NTFS.ToString(), Drive.DriveFormat);
         }
 
         [Test]
@@ -64,7 +64,7 @@ namespace RamDisk.Tests
         {
             decimal kb = 1024;
             var size = Math.Round(Drive.TotalSize / kb / kb);
-            Assert.AreEqual(size, 128);
+            Assert.AreEqual(128, size);
         }
 
         [Test]
